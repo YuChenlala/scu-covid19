@@ -28,7 +28,7 @@ s = requests.Session()
 header = {"User-Agent": "Mozilla/5.0 (Linux; Android 10;  AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/045136 Mobile Safari/537.36 wxwork/3.0.16 MicroMessenger/7.0.1 NetType/WIFI Language/zh",}
 s.headers.update(header)
 
-user = "你的账户"    # 账号
+user = ""    # 账号
 passwd = "你的密码"   # 川大统一认证密码
 api_key = "你的server酱api"  # server酱的api，填了可以微信通知打卡结果，不填没影响
 
@@ -84,8 +84,8 @@ def submit(s: requests.Session, old: dict):
         'sfyyjc': old['sfyyjc'], #是否医院检查？ 7
         'jcjgqr': old['jcjgqr'], #检查结果确认？ 8
         'address': old['address'], # 9
-        # 'geo_api_info': '{"type":"complete","position":{"Q":30.556680501303,"R":103.991700846355,"lng":103.991701,"lat":30.556681},"location_type":"html5","message":"Get geolocation success.Convert Success.Get address success.","accuracy":40,"isConverted":true,"status":1,"addressComponent":{"citycode":"028","adcode":"510116","businessAreas":[{"name":"白家","id":"510116","location":{"Q":30.562482,"R":104.006821,"lng":104.006821,"lat":30.562482}}],"neighborhoodType":"","neighborhood":"","building":"","buildingType":"","street":"长城路二段","streetNumber":"187号","country":"中国","province":"四川省","city":"成都市","district":"双流区","township":"西航港街道"},"formattedAddress":"四川省成都市双流区西航港街道励行西路四川大学江安校区","roads":[],"crosses":[],"pois":[],"info":"SUCCESS"}', # 10
-        'geo_api_info': '{"type":"complete","position":{"Q":30.62923529731,"R":104.09010172526098,"lng":104.090102,"lat":30.629235},"location_type":"html5","message":"Get sdkLocation failed.Get geolocation success.Convert Success.Get address success.","accuracy":40,"isConverted":true,"status":1,"addressComponent":{"citycode":"028","adcode":"510107","businessAreas":[],"neighborhoodType":"科教文化服务;学校;高等院校","neighborhood":"四川大学","building":"","buildingType":"","street":"望江路","streetNumber":"71号","country":"中国","province":"四川省","city":"成都市","district":"武侯区","township":"望江路街道"},"formattedAddress":"四川省成都市武侯区望江路街道四川大学四川大学望江校区","roads":[],"crosses":[],"pois":[],"info":"SUCCESS"}',
+        # 'geo_api_info': '{"type":"complete","position":{"Q":30.555298665365,"R":104.00049180772601,"lng":104.000492,"lat":30.555299},"location_type":"html5","message":"Get sdkLocation failed.Get geolocation success.Convert Success.Get address success.","accuracy":40,"isConverted":true,"status":1,"addressComponent":{"citycode":"028","adcode":"510116","businessAreas":[{"name":"白家","id":"510116","location":{"Q":30.562482,"R":104.006821,"lng":104.006821,"lat":30.562482}}],"neighborhoodType":"科教文化服务;学校;高等院校","neighborhood":"四川大学江安校区","building":"","buildingType":"","street":"川大路二段","streetNumber":"2号","country":"中国","province":"四川省","city":"成都市","district":"双流区","towncode":"510116002000","township":"西航港街道"},"formattedAddress":"四川省成都市双流区西航港街道四川大学江安校区","roads":[],"crosses":[],"pois":[],"info":"SUCCESS"}', # 10
+        'geo_api_info': '{"type":"complete","position":{"Q":30.555298665365,"R":104.00049180772601,"lng":104.000492,"lat":30.555299},"location_type":"html5","message":"Get sdkLocation failed.Get geolocation success.Convert Success.Get address success.","accuracy":40,"isConverted":true,"status":1,"addressComponent":{"citycode":"028","adcode":"510116","businessAreas":[{"name":"白家","id":"510116","location":{"Q":30.562482,"R":104.006821,"lng":104.006821,"lat":30.562482}}],"neighborhoodType":"科教文化服务;学校;高等院校","neighborhood":"四川大学江安校区","building":"","buildingType":"","street":"川大路二段","streetNumber":"2号","country":"中国","province":"四川省","city":"成都市","district":"双流区","towncode":"510116002000","township":"西航港街道"},"formattedAddress":"四川省成都市双流区西航港街道四川大学江安校区","roads":[],"crosses":[],"pois":[],"info":"SUCCESS"}',
         'area': old['area'], # 11
         'province': old['province'], # 12
         'city': old['city'], # 13
